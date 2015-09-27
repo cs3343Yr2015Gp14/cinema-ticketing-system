@@ -1,9 +1,10 @@
 package cinemaTicket;
 
 public class IAdult implements Identity{
-  private int discount = 1;
+  private float discount = 1;
   
-  public int getDiscount(){
+  @Override
+  public float getDiscount(){
     return discount;
   }
 }
