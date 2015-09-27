@@ -1,5 +1,8 @@
 package cinemaTicket;
 
-public interface Identity {
-  public float getDiscount();
+public abstract class Identity {
+	
+	public abstract String getId();
+	public abstract float getDiscount();
+	
 }
