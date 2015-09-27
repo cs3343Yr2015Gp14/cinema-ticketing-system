@@ -1,6 +1,6 @@
 package cinemaTicket;
 
-public class IGold implements Identity{
+public class IGold implements Membership{
   private float discount = 0.8;
   private String membership = "Gold";
   
