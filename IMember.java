@@ -1,6 +1,6 @@
 package cinemaTicket;
 
-public class IMember implements Identity{
+public class IMember implements Membership{
   private float discount = 0.95;
   private String membership = "Normal";
   
