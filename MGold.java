@@ -1,7 +1,7 @@
 package cinemaTicket;
 
-public class IGold implements Membership{
-  private float discount = 0.8;
+public class MGold implements Membership{
+  private float discount = (float)0.8;
   private String membership = "Gold";
   
   @Override
