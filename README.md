@@ -4,4 +4,4 @@ Identity Discount:
 
 Adult: no discount
 
-Studentelderly: 0.9
+Student and Elderly: 0.9
