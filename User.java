@@ -2,7 +2,7 @@ package cinemaTicket;
 
 public class User
 {
-	private String name;
+    private String name;
     private String password;
     private Age age;
     private Membership membership;
@@ -55,11 +55,11 @@ public class User
     	return "user: " + this.name;
     }
 
-	public float getAgeD() {
-		return age.getDiscount();
-	}
+    public float getAgeD() {
+	return age.getDiscount();
+    }
 
-	public float getMemD() {
-		return membership.getDiscount();
-	}
+    public float getMemD() {
+	return membership.getDiscount();
+    }
 }
