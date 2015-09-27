@@ -42,7 +42,7 @@ public class Main {
 		while (true){
 			System.out.println("Please choose ticket type: 1 -Student/Elderly 2 -Adult");
 			int i=in.nextInt();
-			if (i != 1 || i != 2)
+			if (i != 1 && i != 2)
 				System.out.print("Not vaild type");
 			else
 				break;
