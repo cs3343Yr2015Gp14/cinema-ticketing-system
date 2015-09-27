@@ -5,6 +5,6 @@ public class IStudentElderly implements Identity{
   
   @Override
   public float getDiscount(){
-  return discount;
+    return discount;
   }
 }
