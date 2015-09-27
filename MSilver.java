@@ -1,6 +1,6 @@
 package cinemaTicket;
 
-public class ISilver implements Membership{
+public class MSilver implements Membership{
   private float discount = 0.85;
   private String membership = "Silver";
   
