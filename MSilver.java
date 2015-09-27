@@ -1,7 +1,7 @@
 package cinemaTicket;
 
 public class MSilver implements Membership{
-  private float discount = 0.85;
+  private float discount = (float)0.85;
   private String membership = "Silver";
   
   @Override
