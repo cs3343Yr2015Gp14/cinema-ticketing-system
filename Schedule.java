@@ -20,7 +20,8 @@ public class Schedule implements Comparable<Schedule>{
 	
 	@Override
 	public int hashCode(){
-		return movie.getCode()*10000+schedule.charAt(0)*1000+schedule.charAt(1)*100+schedule.charAt(3)*10+schedule.charAt(4);
+		return movie.getCode()*10000+Integer.parseInt(schedule.substring(0,1))*1000+Integer.parseInt(schedule.substring(1,2))*100
+				+Integer.parseInt(schedule.substring(3,4))*10+Integer.parseInt(schedule.substring(4));
 	}
 	
 }
