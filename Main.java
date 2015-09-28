@@ -93,18 +93,18 @@ public class Main {
 		int aNum=in.nextInt();
 		in.nextLine();
 		
-		Identity id;
+		Identity[] id=new Identity[numOfSeat];
 		for (int i=0; i< sNum; i++){
-			id=new IStudentElderly();
-			SeatAllocation.getSeat(schedule,seats[i]).setId(id);
+			id[i]=new IStudentElderly();
+			SeatAllocation.getSeat(schedule,seats[i]).setId(id[i]);
 		}
 		for (int i=sNum; i< numOfSeat; i++){
-			id=new IAdult();
-			SeatAllocation.getSeat(schedule,seats[i]).setId(id);
-		}//end of the Edition
+			id[i]=new IAdult();
+			SeatAllocation.getSeat(schedule,seats[i]).setId(id[i]);
+		}
 		*/
 		
-		System.out.println("Member type: 1-Not Member 2-Normal 3-Gold 4-Silver");
+		System.out.println("Please choose member type: 1-Not Member 2-Normal 3-Gold 4-Silver");
 		int mType=in.nextInt();
 		in.nextLine();
 		Membership member;
@@ -116,7 +116,7 @@ public class Main {
 			member=new MSilver();
 		else
 			member=new MNotMember();
-		
+			
 		System.out.println("Please choose pay method: 1-Cash 2-Credit Card");
 		int pay=in.nextInt();
 		in.nextLine();
@@ -130,7 +130,7 @@ public class Main {
 		for(String s:seats){
 			System.out.print(SeatAllocation.getSeat(schedule,s).getSeatName()+" ");
 		}
-		System.out.println("\nTotal: $"+PaymentController.payTotal());
+		System.out.println("\nTotal: $"+PaymentController.payTotal(movie,id,member,pMethod));
 		
 		System.out.println("\nBuy ticket?");
 		String buyAns=in.nextLine();
