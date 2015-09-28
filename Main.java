@@ -105,8 +105,25 @@ public class Main {
 		*/
 		
 		System.out.println("Member type: 1-Not Member 2-Normal 3-Gold 4-Silver");
+		int mType=in.nextInt();
+		in.nextLine();
+		Membership member;
+		if (mType==2)
+			member=new MNormal();
+		else if (mType==3)
+			member=new MGold();
+		else if (mType==4)
+			member=new MSilver();
+		else
+			member=new MNotMember();
 		
-		System.out.println("Buy ticket?");
+		System.out.print("Summary:\nMovie: "+movie.getName()+"\nTime: "+schedule.getSchedule()+"\nSeat: ");
+		for(String s:seats){
+			System.out.print(SeatAllocation.getSeat(schedule,s).getSeatName()+" ");
+		}
+		System.out.println("\nTotal: $");
+		
+		System.out.println("\nBuy ticket?");
 		String buyAns=in.nextLine();
 		if(buyAns.equals("y"))
 			buy=true;
