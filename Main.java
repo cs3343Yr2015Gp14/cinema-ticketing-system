@@ -39,31 +39,44 @@ public class Main {
 		}
 		
 		//Some Edition
+		int seatType;
 		while (true){
 			System.out.println("Please choose ticket type: 1 -Student/Elderly 2 -Adult");
-			int i=in.nextInt();
-			if (i != 1 && i != 2)
+			seatType=in.nextInt();
+			if (seatType != 1 && seatType != 2)
 				System.out.print("Not vaild type");
 			else
 				break;
 		}
-		while(numOfSeat>1){
-			do{
-				System.out.println("How many tickets you want for this type?");
-				int num=in.nextInt();
-				for (int i=0; i< num; i++){
-					Identity id;
-					if(i==1){
-						id=new IStudentElderly();
-						ticket.add(id);
+		if(numOfSeat==1){
+			if(seatType==1){
+				id=new IStudentElderly();
+				ticket.add(id);
+			}
+			else if(seatType==2){
+				id=new IAdult();
+				ticket.add(id);
+			}
+		}
+		else{
+			while(numOfSeat>1){
+				do{
+					System.out.println("How many tickets you want for this type?");
+					int num=in.nextInt();
+					for (int i=0; i< num; i++){
+						Identity id;
+						if(seatType==1){
+							id=new IStudentElderly();
+							ticket.add(id);
+						}
+						else if(seatType==2){
+							id=new IAdult();
+							ticket.add(id);
+						}
 					}
-					else if(i==2){
-						id=new IAdult();
-						ticket.add(id);
-					}
-				}
-				numOfSeat-=num;
-			}while(numOfSeat==1);
+					numOfSeat-=num;
+				}while(numOfSeat==1);
+			}
 		}//end of the Edition
 		in.nextLine();
 		
