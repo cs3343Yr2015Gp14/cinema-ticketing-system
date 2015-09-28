@@ -39,7 +39,7 @@ public class Main {
 		}
 		
 		//Some Edition
-		while (true){
+		/*while (true){
 			System.out.println("Please choose ticket type: 1 -Student/Elderly 2 -Adult");
 			int i=in.nextInt();
 			if (i != 1 && i != 2)
@@ -68,7 +68,30 @@ public class Main {
 		in.nextLine();
 		
 		System.out.println();
+		*/
 		
+		//Connie's Edition 28/9 17:10
+		System.out.println("Please enter the number of tickets you want for each type 1 -Student/Elderly 2 -Adult");
+		System.out.print("1 -Student/Elderly: ");
+		int sNum=in.nextInt();
+		in.nextLine();
+		System.out.print("2 -Adult: ");
+		int aNum=in.nextInt();
+		in.nextLine();
+		
+		Identity id;
+		for (int i=0; i< sNum; i++){
+			id=new IStudentElderly();
+			SeatAllocation.getSeat(schedule,seats[i]).setId(id);
+		}
+		for (int i=sNum; i< numOfSeat; i++){
+			id=new IAdult();
+			SeatAllocation.getSeat(schedule,seats[i]).setId(id);
+		}
+		
+		System.out.println("Member type: 1-Not Member 2-Normal 3-Gold 4-Silver");
+		
+		//End of edition
 		
 		System.out.println("Buy ticket?");
 		String buyAns=in.nextLine();
