@@ -13,7 +13,7 @@ public class MovieOffice {
 	
 	public static String getMovieName(int aCode){
 		for (String m:allmovie){
-			if (m.charAt(0)==aCode)
+			if (Integer.parseInt(m.substring(0,1))==aCode)
 				return m;
 		}
 		return null;
