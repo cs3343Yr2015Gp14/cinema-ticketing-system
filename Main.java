@@ -85,7 +85,7 @@ public class Main {
 		
 		//Connie
 		/*
-		System.out.println("Please enter the number of tickets you want for each type 1 -Student/Elderly 2 -Adult");
+		System.out.println("Please enter the number of tickets you want for each type. 1-Student/Elderly 2-Adult");
 		System.out.print("1 -Student/Elderly: ");
 		int sNum=in.nextInt();
 		in.nextLine();
@@ -117,11 +117,20 @@ public class Main {
 		else
 			member=new MNotMember();
 		
+		System.out.println("Please choose pay method: 1-Cash 2-Credit Card");
+		int pay=in.nextInt();
+		in.nextLine();
+		PayMethod pMethod;
+		if (pay==1)
+			pMethod=new PCash();
+		else
+			pMethod=new PCreditCard();
+		
 		System.out.print("Summary:\nMovie: "+movie.getName()+"\nTime: "+schedule.getSchedule()+"\nSeat: ");
 		for(String s:seats){
 			System.out.print(SeatAllocation.getSeat(schedule,s).getSeatName()+" ");
 		}
-		System.out.println("\nTotal: $");
+		System.out.println("\nTotal: $"+PaymentController.payTotal());
 		
 		System.out.println("\nBuy ticket?");
 		String buyAns=in.nextLine();
