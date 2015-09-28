@@ -40,6 +40,7 @@ public class Main {
 		
 		//Some Edition-Eva
 		/*int seatType;
+		Identity id;
 		while (true){
 			System.out.println("Please choose ticket type: 1 -Student/Elderly 2 -Adult");
 			seatType=in.nextInt();
@@ -64,7 +65,6 @@ public class Main {
 					System.out.println("How many tickets you want for this type?");
 					int num=in.nextInt();
 					for (int i=0; i< num; i++){
-						Identity id;
 						if(seatType==1){
 							id=new IStudentElderly();
 							ticket.add(id);
