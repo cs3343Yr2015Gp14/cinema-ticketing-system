@@ -3,7 +3,7 @@ package cinemaTicket;
 import java.util.*;
 
 public class Main {
-	private ArrayList<Identity> ticket= new ArrayList<Identity>();
+	private ArrayList<Identity> ticket= new ArrayList<Identity>();	//Eva
 	
 	public static void main(String [] args){
 		Scanner in = new Scanner(System.in);
@@ -38,8 +38,8 @@ public class Main {
 			SeatAllocation.allocateSeat(schedule,seat);
 		}
 		
-		//Some Edition
-		int seatType;
+		//Some Edition-Eva
+		/*int seatType;
 		while (true){
 			System.out.println("Please choose ticket type: 1 -Student/Elderly 2 -Adult");
 			seatType=in.nextInt();
@@ -81,7 +81,30 @@ public class Main {
 		in.nextLine();
 		
 		System.out.println();
+		*/
 		
+		//Connie
+		/*
+		System.out.println("Please enter the number of tickets you want for each type 1 -Student/Elderly 2 -Adult");
+		System.out.print("1 -Student/Elderly: ");
+		int sNum=in.nextInt();
+		in.nextLine();
+		System.out.print("2 -Adult: ");
+		int aNum=in.nextInt();
+		in.nextLine();
+		
+		Identity id;
+		for (int i=0; i< sNum; i++){
+			id=new IStudentElderly();
+			SeatAllocation.getSeat(schedule,seats[i]).setId(id);
+		}
+		for (int i=sNum; i< numOfSeat; i++){
+			id=new IAdult();
+			SeatAllocation.getSeat(schedule,seats[i]).setId(id);
+		}//end of the Edition
+		*/
+		
+		System.out.println("Member type: 1-Not Member 2-Normal 3-Gold 4-Silver");
 		
 		System.out.println("Buy ticket?");
 		String buyAns=in.nextLine();
